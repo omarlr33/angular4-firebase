@@ -1,0 +1,18 @@
+<md-toolbar color="primary" class="dark">
+
+  <a class="app-icon" [routerLink]="['/']" routerLinkActive="active"><i></i> <span>{{title}}</span></a>
+  <a fxFlex md-button *ngIf="getIsAuth() | async" [routerLink]="['/dashboard']" routerLinkActive="active"><span i18n>Dashboard</span></a>
+    <a md-button href="/en/" ><span>en</span></a>
+    <a md-button href="/es/" ><span>es</span></a>
+  <a class="left app-account" *ngIf="getIsAuth() | async"><img  [src]="(user | async)?.photoURL" [mdMenuTriggerFor]="menu"/></a>
+</md-toolbar>
+
+<md-menu class="app-account" #menu="mdMenu">
+  <button md-menu-item >
+    <span><strong>{{(user | async)?.displayName}}</strong></span> <span>{{(user | async)?.email}}</span>
+  </button>
+  <button md-menu-item (click)="logout()">
+    <md-icon>exit_to_app</md-icon>
+    <span i18n>sign out</span>
+  </button>
+</md-menu>

@@ -1,0 +1,16 @@
+$break-small: 768px;
+
+md-card {
+  max-width: 40%;
+  margin: 2em auto;
+}
+
+
+@media screen and (max-width: $break-small) {
+  
+  md-card {
+  max-width: 90%;
+  margin: 2em auto;
+}
+
+}

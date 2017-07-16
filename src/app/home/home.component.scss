@@ -1,0 +1,41 @@
+$break-small: 768px;
+
+
+.home-content md-card {
+  max-width: 40%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+@media screen and  (max-width: $break-small) {
+  
+ .home-content  md-card {
+  max-width: 90%;
+  margin: 2em auto;
+}
+
+}
+
+
+.back-home{
+  //background-image: url("http://localhost:4200/logo.da3b4a3d670475dcff15.svg");
+  background-image: url("../../assets/petHome.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 400px
+}
+
+
+.home-icon i {
+  background-image: url("../../assets/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 1.4em;
+  border-radius: 50%;
+}
+
+.home-icon span {
+font-size: 1.3em;
+  padding: 1.0em;
+
+}

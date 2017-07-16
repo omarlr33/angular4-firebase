@@ -1,0 +1,62 @@
+$break-small: 768px;
+
+md-toolbar a {
+  color: inherit !important;
+  text-decoration: none;
+}
+md-toolbar.dark {
+  position:fixed !important;
+  /*background-color: #222 !important;*/
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+ .app-icon i {
+  background-image: url("/assets/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 1.4em;
+  border-radius: 50%;
+}
+
+.app-icon span {
+
+  padding: 1.0em;
+
+}
+
+@media screen and  (max-width: $break-small) {
+
+ .app-icon span {
+  visibility: hidden;
+  padding: 1.0em;
+
+}
+
+}
+
+
+.left  {
+
+ margin-left: auto;
+}
+
+.app-account img {
+   height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: 1em;
+}
+
+.mat-menu-content {
+ margin-top: 4em;
+}
+
+.app-account span {
+
+  padding: 1.0em;
+
+}
+

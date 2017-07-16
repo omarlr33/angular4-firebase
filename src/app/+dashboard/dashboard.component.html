@@ -1,0 +1,9 @@
+  <div class="dashboard-content">
+  <div *ngFor="let photo of photos | async | orderBy: 'id':'desc' ">
+<dashboard-photo [photo]="photo"> </dashboard-photo>
+  </div>
+</div>
+
+<span class="app-action">
+  <button md-fab><md-icon>check circle</md-icon></button>
+</span>

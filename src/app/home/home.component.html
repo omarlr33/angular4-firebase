@@ -1,0 +1,36 @@
+<div class="home-content">
+  <h1>
+  </h1>
+
+  <md-card>
+  <md-card-header>
+    <div md-card-avatar class="home-icon"><i></i> <span>{{title}}</span></div>
+  </md-card-header>
+  <div md-card-image class="back-home">
+
+  </div>
+  <div *ngIf="(user | async)?.uid === null else unlogin">
+  <md-card-content>
+    <p appFontTitle>
+    <span i18n>Please sign in!!!</span>
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button color="primary" (click)="login()" ><md-icon>person</md-icon> <span i18n>sign in</span></button>
+
+  </md-card-actions>
+  </div>
+  <ng-template  #unlogin>
+    <md-card-content>
+    <p>
+   <span i18n> Hi </span> {{(user | async)?.displayName}}!
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button color="primary" (click)="logout()" i18n>sign out</button>
+  </md-card-actions>
+  </ng-template>
+</md-card>
+</div>
+
+

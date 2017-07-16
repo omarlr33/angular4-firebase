@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
+ @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+ @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$break-small: 768px;
+
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size:14px;
+  height:100%;
+  margin: 0px;
+  padding: 0px;
+
+  background: rgb(237, 237, 237);
+}
+
+
+
+/*Custom Styles*/
+
+.headline {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+md-content {
+  margin: 4em auto !important;
+  width: 92%;
+  padding: 1em;
+}
+
+
+p.intro {
+  margin: 0em 1em !important;
+}
+
+.app-content{
+   padding-top: 60px;
+}
+
+.notfound-content md-card {
+  max-width: 40%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+
+@media screen and  (max-width: $break-small) {
+
+ .notfound-content  md-card {
+  max-width: 90%;
+  margin: 2em auto;
+}
+
+}
+/*spinner*/
+$offset: 187;
+$duration: 1.4s;
+.spinner {
+  animation: rotator $duration linear infinite;
+}
+
+
+$offset: 187;
+$duration: 1.4s;
+
+.spinner {
+  animation: rotator $duration linear infinite;
+}
+
+.spinner-body {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.path {
+  stroke-dasharray: $offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation:
+    dash $duration ease-in-out infinite,
+    colors ($duration*4) ease-in-out infinite;
+}
+
+@keyframes colors {
+	0% { stroke: #4285F4; }
+	25% { stroke: #DE3E35; }
+	50% { stroke: #F7C223; }
+	75% { stroke: #1B9A59; }
+  100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: $offset; }
+ 50% {
+   stroke-dashoffset: $offset/4;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: $offset;
+   transform:rotate(450deg);
+ }
+}
+
+/*End Custom Styles*/

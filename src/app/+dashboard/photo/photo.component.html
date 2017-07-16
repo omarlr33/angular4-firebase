@@ -1,0 +1,17 @@
+<md-card>
+  <md-card-header>
+    <img md-card-avatar [src]="photo.photoUrl">
+    <md-card-title>{{photo.title}}</md-card-title>
+    <md-card-subtitle>Dog Breed</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image [src]="photo.photoUrl">
+  <md-card-content>
+    <p>
+     Last update:<strong> {{photo.time | amTimeAgo:true}}</strong>
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button i18n>LIKE</button>
+    <button md-button i18n>SHARE</button>
+  </md-card-actions>
+</md-card>
